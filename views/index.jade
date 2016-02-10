@@ -1,5 +1,242 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title} this is a new app by MD
+  #container
+    #intro(data-0='background:rgba(115,120,225,1);opacity:1;', data-1000='top:0%;', data-1500='top:-100%;')
+      #welcome1
+        h1 Welcome
+      #welcome2
+        | This is interactive storyline on nutrition, diet and obesity.
+      #Usage
+        | To navigate throught the storyline use arrow buttons or scroll up and Down.
+        img#arrow(src='img/arrowDown.svg', alt='', data-0='top:0%;', data-500='top:20%;', data-1000='top:70%;')
+    #genderSelection(data-1000='top:100%;', data-1500='top:0%;', data-3500='top:0%;', data-4000='top:-100%;')
+      #male(data-1100='left:0;background:rgba(255,133,152,1);')
+        // <div class="circle" id="gmale"  data-1100="left:-200%;" data-2000="left[swing]:0%;">
+        img#gmale(src='img/boy.svg', data-1100='left:-200%;', data-2000='left[swing]:0%;', alt='')
+        // circle left
+        // </div>
+      #female(data-1100='right:0;background:rgba(52,152,219,1);')
+        // <div class="circle" id="gfemale" data-1100="right:-200%;" data-2000="right[swing]:0%;">
+        img#gfemale(src='img/girl.svg', alt='', data-1100='right:-200%;', data-2000='right[swing]:0%;')
+        // </div>
+    #personalDetails(data-3500='top:100%;', data-4000='top:0%;', data-6000='top:0%;', data-6500='top:-100%;')
+      #weight(data-2500='right:66.7%;background:rgba(0,45,64,1);')
+        // <div class="circle" id="pWeight" data-4000="left[swing]:-185%;" data-4700="bottom:0%;left[swing]:-13%;">
+        img#pWeight(src='img/scales.svg', alt='', data-4000='left[swing]:-185%;', data-4700='bottom:0%;left[swing]:0%;')
+        // </div>
+      #height(data-2500='background:rgba(255,215,103,1);')
+        //
+          <div class="circle" id="pHeight" data-4000="bottom[swing]:175%;" data-4700="bottom[swing]:0%;">
+          c2
+          </div>
+        img#pHeight(src='img/height.svg', alt='', data-4000='bottom[swing]:175%;', data-4700='bottom[swing]:0%;')
+      #age(data-2500='left:66.7%;background:rgba(27,188,155,1);')
+        //
+          <div class="circle" id="pAge" data-4000="right[swing]:-185%;" data-4700="bottom:0%;right[swing]:-13%;">
+          c3
+          </div>
+        img#pAge(src='img/age.svg', alt='', data-4000='right[swing]:-185%;', data-4700='bottom:0%;right[swing]:0%;')
+    #macroNutrients(data-6000='top:100%;', data-6500='top:0%;', data-12000='top:0%;', data-12500='top:-100%;')
+      #protein(data-6500='background:rgba(255,194,0,1);', data-8000='left:0%;', data-8500='left:-100%;')
+        // <div class="circle" id="mProtein" data-6000="bottom:-160%;" data-6500="top:0%; left:0%; right:40%; bottom:0%;"></div>
+        img#mProtein(src='img/protein.svg', alt='', data-6000='bottom:-160%;', data-6500='top:0%; left:0%; right:40%; bottom:0%;')
+        #proteinDesc(data-6000='left:113%; opacity:0;', data-6500='top:0%; left:40%; right:0%; bottom:0%;opacity:1;')
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi suscipit harum fugiat amet neque, ullam, velit dolores, odit porro, aspernatur molestiae ea recusandae et. Provident ducimus mollitia repudiandae adipisci eaque.desc pro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim a, neque debitis, quibusdam, possimus dolores molestiae labore, accusantium magni aperiam cupiditate quod deleniti ex sequi voluptates earum expedita autem. Sunt!
+      #carbs(data-6500='background:rgba(191,187,17,1);', data-8000='left:100%;', data-8500='left:0%', data-10000='left:0%;', data-10500='left:-100%;')
+        // <div class="circle" id="mCarb" data-8000="top:-163%;" data-8500="top:0%; left:0%; right:40%; bottom:0%;"></div>
+        img#mCarb(src='img/carbs.svg', alt='', data-8000='top:-163%;', data-8500='top:0%; left:0%; right:40%; bottom:0%;')
+        #carbsDesc(data-8000='left:153%;opacity:0;', data-8500='top:0%; left:40%; right:0%; bottom:0%;opacity:1;')
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi suscipit harum fugiat amet neque, ullam, velit dolores, odit porro, aspernatur molestiae ea recusandae et. Provident ducimus mollitia repudiandae adipisci eaque.desc pro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim a, neque debitis, quibusdam, possimus dolores molestiae labore, accusantium magni aperiam cupiditate quod deleniti ex sequi voluptates earum expedita autem. Sunt!
+      #fat(data-6500='background:rgba(232,136,1,1);', data-10000='left:100%;', data-10500='left:0%;', data-12500='left:0%;')
+        // <div class="circle" id="mFat" data-10000="top:-153%;" data-10500="top:0%; left:0%; right:40%; bottom:0%;"></div>
+        img#mFat(src='img/fats.svg', alt='', data-10000='top:-153%;', data-10500='top:0%; left:0%; right:40%; bottom:0%;')
+        #fatDesc(data-10000='top:153%;opacity:0;', data-10500='top:0%; left:40%; right:0%; bottom:0%;opacity:1;')
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi suscipit harum fugiat amet neque, ullam, velit dolores, odit porro, aspernatur molestiae ea recusandae et. Provident ducimus mollitia repudiandae adipisci eaque.desc pro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim a, neque debitis, quibusdam, possimus dolores molestiae labore, accusantium magni aperiam cupiditate quod deleniti ex sequi voluptates earum expedita autem. Sunt!
+    #beverages(data-12000='top:100%;', data-12500='top:0%;', data-19500='top:0%;', data-25500='top:0%;', data-26000='top:0%;', data-27000='top:-100%;')
+      #fizDrinks(data-12000='background:rgba(56,206,181,1);', data-12500='top:0%;', data-15000='top:0%;', data-15500='top:-100%;')
+        // <div class="circle" id="bFizzy" data-12600="opacity:0;" data-13000="opacity:1;top:0%; left:0%; right:0%; bottom:0%;" data-13500="top:0%;" data-14500="top:-160%;"></div>
+        img#bubbles(src='img/bubbles.svg', alt='', data-13000='opacity:1;top:0%; left:0%; transform:rotate(0deg);right:0%; bottom:0%;', data-13500='top:-10%;', data-14500='top:-40%;')
+        img#bFizzy(src='img/fizzy.svg', alt='', data-12600='opacity:0;', data-13000='opacity:1;top:0%; left:0%; right:0%; bottom:0%;', data-13500='top:0%;', data-14500='top:-200%;')
+        #fizDrinksDesc(data-13000='top:150%;', data-14000='opacity:1; top:85%;', data-15000='top:-20%;')
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam dolorum beatae temporibus aperiam autem modi nostrum reprehenderit quaerat adipisci quibusdam ut magni culpa pariatur, ratione mollitia deserunt cupiditate ex numquam.
+      #juice(data-15000='top:100%;background:rgba(2,76,89,1);', data-15500='top:0%;')
+        // <div class="circle" id="bJuice" data-15500="opacity:0;" data-16000="opacity:1; top:0%; left:0%; right:0%; bottom:0%; opacity:1;" data-16500="top:0%;" data-17500="top:-160%;"></div>
+        img#bJuice(src='img/juice.svg', alt='', data-15500='opacity:0;', data-16000='opacity:1;transform:rotate(0deg); top:0%; left:0%; right:0%; bottom:0%; opacity:1;', data-16500='top:0%;', data-17500='top:-200%;')
+        img#orange(src='img/orange.svg', alt='', data-15500='opacity:0;left:-100%;', data-16000='opacity:1;transform:rotate(0deg); top:35%; left:10%; opacity:1;', data-16500='transform:rotate(360deg);top:35%;', data-17500='top:-200%;')
+        img#kiwi(src='img/kiwi.svg', alt='', data-15500='opacity:0;right:-100%;', data-16000='opacity:1;transform:rotate(0deg); right:10%; top:35%; opacity:1;', data-16500='top:35%;transform:rotate(-360deg);', data-17500='top:-200%;')
+        img#strawberry(src='img/strawberry.svg', alt='', data-15500='opacity:0;top\
+            :-100%;', data-16000='opacity:1; top:48%; left:0%; right:0%; bottom:0%; opacity:1;', data-16500='top:48%;', data-17500='top:-200%;')
+        #juiceDesc(data-16000='top:150%;', data-17000='top:85%;', data-18000='top:-20%;')
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime minima quidem dolor consequuntur, quibusdam necessitatibus. Aperiam possimus fuga obcaecati, tempora soluta veritatis, aliquam, quae ipsum quis iure earum enim harum.
+      #water(data-18000='background:rgba(112,91,53,1);top:100%;', data-18500='top:0%;', data-20000='background:rgba(112,91,53,1);', data-21500='background:rgba(168,197,69,1);')
+        // <div class="circle" id="bWater" data-18500="opacity:1" data-19000="opacity:1;top:0%; left:0%; right:0%; bottom:0%;" data-18500="top:0%;" data-19500="top:0%;" data-20500="top:-160%;"></div>
+        img#bWater(src='img/water.svg', alt='', data-18500='opacity:1', data-19000='opacity:1;top:0%; left:0%; right:0%; bottom:0%;', data-19500='top:0%;', data-20500='top:-200%;')
+        #waterDesc(data-19000='opacity:0;', data-19300='opacity:1;top:85%;', data-20000='opacity:1;', data-20500='opacity:0')
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, fugiat quasi suscipit, pariatur exercitationem possimus mollitia reiciendis eum cupiditate nemo vitae ducimus, repudiandae obcaecati culpa magni qui. Qui, voluptates.
+        // <div id="waterDrop" data-19500="top:30%;opacity:1;" data-20000="top:50%;" data-20600="top:100%;opacity:1;" data-20700="top:100%; opacity:0;" data-20900="top:-110%;opacity:0;" data-21000="top:-110%;opacity:1;" data-22000="top:30%;" data-22300="opacity:0;"></div>
+        img#waterDrop(src='img/waterDrop.svg', alt='', data-19500='top:10%;opacity:1;', data-20000='top:50%;', data-20600='top:100%;opacity:1;', data-20700='top:100%; opacity:0;', data-20900='top:-110%;opacity:0;', data-21000='top:-110%;opacity:1;', data-22000='top:30%;', data-22300='opacity:0;')
+    #fastVsHealthy(data-22000='top:0%;', data-25500='top:0%;', data-26500='top:-100%;')
+      #healthyFood
+        // <div class="circle" id="healthyGra" data-20800="opacity:0" data-21000="opacity:1;top:70%;" data-22000="top:20%;right:0%;" data-22500="top:10%;right:0%;" data-23500="right:40%;">
+        img#healthyGra(src='img/healthy.svg', alt='', data-20800='opacity:0', data-21000='opacity:1;top:70%;', data-22000='top:20%;right:0%;', data-22500='top:10%;right:0%;', data-23500='right:40%;')
+        // </div>
+        #healthyFoodDesc(data-24000='opacity:0;', data-24500='opacity:1;top:67%;right:40%;')
+          | HEalthyLorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi tenetur repellat aut inventore velit ullam sunt aperiam quae quasi deserunt at iure doloribus labore, ex distinctio, quibusdam delectus architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptas officiis labore obcaecati, et veniam iste adipisci voluptatem, aspernatur aperiam corrupti commodi. Sunt, esse, cumque. Provident veniam deleniti repellat quaerat.
+      #vs(data-23000='opacity:0;top:40%;', data-23400='opacity:1') VS
+      #fastFood
+        // <div class="circle" id="fatGra" data-23500="opacity:0;" data-24000="opacity:1;left:40%;top:10%;"></div>
+        img#fatGra(src='img/unhealthy.svg', alt='', data-23500='opacity:0;', data-24000='opacity:1;left:40%;top:10%;')
+        #fastFoodDesc(data-24000='opacity:0;', data-24500='opacity:1;top:67%;left:40%;')
+          | FASTLorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi tenetur repellat aut inventore velit ullam sunt aperiam quae quasi deserunt at iure doloribus labore, ex distinctio, quibusdam delectus architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur voluptas officiis labore obcaecati, et veniam iste adipisci voluptatem, aspernatur aperiam corrupti commodi. Sunt, esse, cumque. Provident veniam deleniti repellat quaerat.
+    #statistics(data-26000='background:rgba(223,211,182,1); top:100%;', data-27000='top:0%;', data-29000='top:0%;', data-30000='background:rgba(223,211,182,1);', data-31500='background:rgba(0,146,178,1);', data-37000='top:0%;', data-37500='top:-100%;')
+      #statGallery(data-27000='top:0%;', data-29000='top:0%;', data-30000='top:-80%;', data-31000='top:-80%;', data-32000='top:-160%;', data-33000='top:-160%;', data-33500='top:-250%;')
+        img#stat1(src='img/adultM.svg', alt='', data-27000='opacity:0;top:10%;', data-27500='right:49.5%; opacity:1;')
+        img#stat2(src='img/adultF.svg', alt='', data-27000='opacity:0;top:10%;', data-28000='right:16.5%; opacity:1;')
+        img#stat3(src='img/adultM.svg', alt='', data-27000='opacity:0;top:10%;', data-28500='left:16.5%; opacity:0.3;')
+        img#stat4(src='img/adultF.svg', alt='', data-27000='opacity:0;top:10%;', data-29000='left:49.5%; opacity:0.3;')
+        #statDesc1(data-28000='opacity:0;', data-28500='top:65%;opacity:1;')
+          h1 More than half of British adults are obese!
+        img#stat5(src='img/male.svg', alt='', data-29500='opacity:0;top:90%;', data-30000='right:30%; opacity:1;')
+        img#stat6(src='img/female.svg', alt='', data-29500='opacity:0;top:90%;', data-30000='left:30%; opacity:1;')
+        #statDesc2(data-30000='opacity:0;', data-30500='top:145%;opacity:1;')
+          h1 17% of men and 21% of women are obese in Britain
+        // <div class="humanPic" id="stat7" data-32000="opacity:0;top:150%;" data-32500="opacity:1;" ></div>
+        img#stat7(src='img/stats.svg', alt='', data-32000='opacity:0;top:170%;', data-32500='opacity:1;')
+        #statDesc2(data-32500='opacity:0;', data-32700='top:225%; opacity:1;')
+          h1 UK obesity levels are highest in Europe
+      #ukMap
+        // <div id="ukMapDesc" data-33500="opacity:0;transform:rotate(0deg);" data-34000="top:10%;opacity:1;transform:rotate(720deg);" data-34500="top:10%;" data-37000="top:10%;" data-37500="top:-100%;"></div>
+        img#ukMapDesc(src='img/map.svg', alt='', data-33500='opacity:0;transform:rotate(0deg);', data-34000='top:10%;opacity:1;transform:rotate(720deg);', data-34500='top:10%;', data-37000='top:10%;', data-37500='top:-100%;')
+        //
+          <div class="statisticPoint" data-34500="">
+          &gt;50&#37; of Adults are obese or overweight Scotland
+          </div>
+          <div class="statisticPoint" data-35000="">
+          &gt;50&#37; of Adults are obese or overweight England
+          </div>
+          <div class="statisticPoint" data-35500="">
+          &gt;50&#37; of Adults are obese or overweight Wales
+          </div>
+          <div class="statisticPoint" data-36000="">
+          &gt;50&#37; of Adults are obese or overweight Ireland
+          </div>
+    #sideEffects(data-37000='top:100%;', data-37500='top:0%; background:rgba(182,73,38,1);', data-43000='top:0%;', data-43500='top:-100%;')
+      h2#downsides(data-38000='opacity:0;', data-38500='opacity:1;') Risks of obesity
+      // <div class="circle" id="side1" data-38000="opacity:0;"data-38500="opacity:1;transform:scale(0.4)"></div>
+      img#side1(src='img/clothes.svg', alt='', data-38000='opacity:0;', data-38500='opacity:1;transform:scale(0.7);top:5%;')
+      // <div class="circle" id="side2" data-38500="opacity:0;" data-39000="opacity:1;left:27%;top:7%;transform:scale(0.4)"></div>
+      img#side2(src='img/heart.svg', alt='', data-38500='opacity:0;', data-39000='opacity:1;left:27%;top:13%;transform:scale(0.7)')
+      // <div class="circle" id="side3" data-39000="opacity:0;" data-39500="opacity:1; top:30%;left:37%;transform:scale(0.4)"></div>
+      img#side3(src='img/medicine.svg', alt='', data-39000='opacity:0;', data-39500='opacity:1; top:35%;left:37%;transform:scale(0.7)')
+      // <div class="circle" id="side4" data-39500="opacity:0;" data-40000="opacity:1; top:53%;left:27%;transform:scale(0.4)"></div>
+      img#side4(src='img/hospital.svg', alt='', data-39500='opacity:0;', data-40000='opacity:1; top:58%;left:27%;transform:scale(0.7)')
+      // <div class="circle" id="side5" data-40000="opacity:0;" data-40500="opacity:1; top:60%;transform:scale(0.4)"></div>
+      img#side5(src='img/xray.svg', alt='', data-40000='opacity:0;', data-40500='opacity:1; top:65%;transform:scale(0.7)')
+      // <div class="circle" id="side6" data-40500="opacity:0;" data-41000="opacity:1; top:53%;right:27%;transform:scale(0.4)"></div>
+      img#side6(src='img/insulin.svg', alt='', data-40500='opacity:0;', data-41000='opacity:1; top:58%;right:27%;transform:scale(0.7)')
+      // <div class="circle" id="side7" data-41000="opacity:0;" data-41500="opacity:1; top:30%;right:37%;transform:scale(0.4)"></div>
+      img#side7(src='img/depression.svg', alt='', data-41000='opacity:0;', data-41500='opacity:1; top:35%;right:37%;transform:scale(0.7)')
+      // <div class="circle" id="side8" data-41500="opacity:0;" data-42000="opacity:1; top:7%;right:27%;transform:scale(0.4)"></div>
+      img#side8(src='img/death.svg', alt='', data-41500='opacity:0;', data-42000='opacity:1; top:13%;right:27%;transform:scale(0.7)')
+      // <div class="circle" id="side9" data-42000="opacity:0;" data-42500="opacity:1; top:30%; transform:scale(0.5)"></div>
+      img#side9(src='img/death.svg', alt='', data-42000='opacity:0;', data-42500='opacity:1; top:35%;')
+    #tdee(data-43000='top:100%;', data-43500='top:0%;background:rgba(255,176,59,1);', data-45500='top:0%;', data-46000='top:-100%;')
+      img#tdeeCalculator(src='img/calculator.svg', alt='', data-43500='opacity:0;', data-44000='opacity:1;')
+      // <div id="screen" data-44000="top:5%;">Hello World</div>
+      //
+        <div class="tdeeButton" data-44000="top:30%;right:75%;">1</div>
+        <div class="tdeeButton" data-44000="top:30%;right:44%;">2</div>
+        <div class="tdeeButton" data-44000="top:30%;right:13%;">3</div>
+        <div class="tdeeButton" data-44000="top:42%;right:75%;">4</div>
+        <div class="tdeeButton" data-44000="top:42%;right:44%;">5</div>
+        <div class="tdeeButton" data-44000="top:42%;right:13%;">6</div>
+        <div class="tdeeButton" data-44000="top:54%;right:75%;">7</div>
+        <div class="tdeeButton" data-44000="top:54%;right:44%;">8</div>
+        <div class="tdeeButton" data-44000="top:54%;right:13%;">9</div>
+        <div class="tdeeButton"data-44000="top:66%;right:13%;">0</div>
+        <div id="clearButton" data-44000="top:66%;left:6.3%">Clear</div>
+      //
+        <div id="divisionBut" data-44000="top:5%;">/</div>
+        <div id="multiplicationBut" data-44000="top:5%;">*</div>
+        <div id="minusBut" data-44000="top:5%;">-</div>
+        <div id="plusBut" data-44000="top:5%;">+</div>
+      //
+        <div id="tdeeExplanation1" data-44000="opacity:1; top:30%;left:47%;">Some Text</div>
+        <div id="tdeeExplanation2"  data-44000="opacity:1; top:54%;left:47%;">Some text 2</div>
+        <div id="tdeeExplanation3"  data-44000="opacity:1; top:78%;left:0.3%;">Sometext </div>
+      #tdeeDesc1(data-44000='opacity:0;', data-44500='opacity:1; top:11%; right:53%;')
+        h1 TDEE Calculator1
+        |                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illum assumenda cupiditate labore tempora repudiandae ipsam nisi. Dolorum sint, facilis, sunt nam incidunt quis ut asperiores adipisci, ipsum  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cum eum quae et neque laboriosam id, corporis ut tempore natus, molestiae quam aliquam ea deserunt nulla, ducimus quas quidem possimus?veniam magni.
+      #tdeeDesc2(data-44000='opacity:0;', data-44500='opacity:1; top:11%; left:53%;')
+        h1 TDEE Calculator2
+        |                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illum assumenda cupiditate labore tempora repudiandae ipsam nisi. Dolorum sint, facilis, sunt nam incidunt quis ut asperiores adipisci, ipsum  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cum eum quae et neque laboriosam id, corporis ut tempore natus, molestiae quam aliquam ea deserunt nulla, ducimus quas quidem possimus?veniam magni.
+    #flexibleDiet(data-45500='top:100%;background:rgba(31,138,112,1);', data-46000='top:0%;', data-49000='top:0%;', data-49500='top:-100%;')
+      #flexiWrap(data-46000='top:0%;', data-47500='top:0%;', data-48000='top:-80%;')
+        #flexDietDesc
+          h1 Flexible Dieting
+          |                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci vel eligendi, repudiandae, similique nam possimus voluptates illum temporibus sed soluta consequuntur in voluptas. Animi sunt necessitatibus eligendi, numquam omnis quidem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur exercitationem, totam illo dolorum nesciunt fugit! Accusamus a at nemo nostrum iusto eligendi similique, fugiat quisquam! Deleniti cumque perferendis nemo iure.
+        //
+          <div class="circle" id="flexiDiet" data-46200="opacity:0; top:30%;right:30%;" data-46700="opacity:1;transform:scale(0.7)"></div>
+          <div class="circle" id="flexiDietFast" data-46200="opacity:0;top:30%;left:30%;" data-46700="opacity:1;transform:scale(0.7)"></div>
+        img#flexiDiet(src='img/egg.svg', alt='', data-46200='opacity:0; top:30%;right:30%;', data-46700='opacity:1;transform:scale(0.7)')
+        h1#flexiOr(data-46200='opacity:0; top:55%;', data-46700='opacity:1;transform:scale(3)') or
+        img#flexiDietFast(src='img/ice.svg', alt='', data-46200='opacity:0;top:30%;left:30%;', data-46700='opacity:1;transform:scale(0.8)')
+        #results(data-46500='opacity:0; top:80%;', data-47000='opacity:1;')
+          h1 Doesn't Matter
+          |                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eaque veritatis, blanditiis itaque autem omnis, qui nihil fugiat voluptas optio maxime eius vel adipisci, pariatur ex dolorem voluptatum ut debitis!
+      #flexDietTools(data-47800='top:100%;', data-48200='top:20%;')
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptatibus placeat non similique voluptates magnam molestias tempore, quis dolorum saepe eveniet ipsam quas praesentium officiis quidem nemo animi, voluptatem veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid molestias cumque quaerat totam quos aperiam adipisci harum id explicabo quidem quam odit sint dolore, perspiciatis dolorum, doloribus, ad est praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quae quasi debitis nobis culpa architecto itaque ex dicta nulla inventore! Ratione animi, harum consequuntur, laboriosam corporis obcaecati voluptate ipsum repellendus.
+      #flexDietTools(data-48000='top:100%;', data-48500='top:50%;')
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptatibus placeat non similique voluptates magnam molestias tempore, quis dolorum saepe eveniet ipsam quas praesentium officiis quidem nemo animi, voluptatem veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid molestias cumque quaerat totam quos aperiam adipisci harum id explicabo quidem quam odit sint dolore, perspiciatis dolorum, doloribus, ad est praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quae quasi debitis nobis culpa architecto itaque ex dicta nulla inventore! Ratione animi, harum consequuntur, laboriosam corporis obcaecati voluptate ipsum repellendus.
+      .dietTools
+        h1(data-48000='opacity:0;', data-48500='opacity:1;top:50%;left:10%;transform:rotate(-40deg);') MyFitnessPal
+        h1(data-48000='opacity:0;', data-48500='opacity:1;top:50%;right:10%;transform:rotate(40deg);') Fitday
+        h1(data-48000='opacity:0;', data-48500='opacity:1;top:80%;left:40%;') Samsung S Health app
+      //
+        <div id="flexDietFast"></div>
+        <div id="flexDietHealthy"></div>
+    #theEnd(data-49000='top:100%;background:rgba(0,67,88,1);', data-49500='top:0%;', data-51000='top:0%;')
+      #end(data-49500='opacity:0;', data-50000='opacity:1;top:10%;') THE END
+      img#theCloud(src='img/cloud.svg', alt='', data-50000='opacity:0;', data-50500='opacity:1; top:15%;')
+      #summary(data-50000='opacity:0;', data-50500='opacity:1; top:40%;')
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsa cum cupiditate, sequi, hic architecto aut non ipsam corrupti esse cumque perspiciatis alias ipsum assumenda, maxime consectetur quos impedit ullam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi temporibus eius velit perferendis error quaerat suscipit, amet aliquid, quisquam, ab tempore enim labore placeat sequi dolore sunt voluptates voluptatem itaque.
+    #footerBar(data-50500='top:80%;opacity:0;', data-51000='opacity:1;')
+      .footerBarButtons 1
+      .footerBarButtons 2
+      .footerBarButtons 3
+      .footerBarButtons 4
+
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\\/script>')
+    script(src='/js/main.js')
+    script(type='text/javascript', src='/js/skrollr.min.js')
+    //if lt IE 9
+      script(type='text/javascript', src='../skrollr-ie/dist/skrollr.ie.min.js')
+    script(type='text/javascript').
+      var s = skrollr.init({
+        edgeStrategy: 'set',
+        easing: {
+          WTF: Math.random,
+          inverted: function (p) {
+            return 1 - p;
+          }
+        }
+      });
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+                function () {
+                  (b[l].q = b[l].q || []).push(arguments)
+                });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+      }(window, document, 'script', 'ga'));
+      ga('create', 'UA-XXXXX-X', 'auto');ga('send', 'pageview');

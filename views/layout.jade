@@ -1,7 +1,22 @@
 doctype html
-html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='')
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='')
+//if IE 8
+  html.no-js.lt-ie9(lang='')
+// [if gt IE 8] <!
+html.no-js(lang='')
+  // <![endif]
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/normalize.min.css')
+    link(rel='stylesheet', href='/css/main.css')
+    link(href='/css/fixed-positioning.css')
+    script(src='/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
   body
     block content
