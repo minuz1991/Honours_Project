@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//var mangoose = require('mongoose');
+
+//mongoDB login minuz mongoAdmin
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -58,3 +61,35 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+var mongoose = require('mongoose');
+
+var mongoCon = 'mongodb://minuz:mongoAdmin@ds054128.mlab.com:54128/mongo';
+
+mongoose.connect(mongoCon);
+
+var db = mongoose.connection;
+var con = 'connected';
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  con;
+  // Create song schema
+  //var sesh = mongoose.Schema({
+  //  ipAddress: String,
+  //  weight: String,
+  //  height: String,
+  //  weeksAtOne: Number
+  //});
+  //
+  //// Store song documents in a collection called "songs"
+  //var Song = mongoose.model('songs', songSchema);
+  //
+  //// Create seed data
+  //var seventies = new Song({
+  //  decade: '1970s',
+  //  artist: 'Debby Boone',
+  //  song: 'You Light Up My Life',
+  //  weeksAtOne: 10
+  //});
+});
