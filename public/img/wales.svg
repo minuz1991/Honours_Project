@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-241 270.4 346.3 190.6" style="enable-background:new -241 270.4 346.3 190.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#A1B963;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'SolexBlack';}
+	.st4{font-size:52.2083px;}
+	.st5{font-family:'SolexBold';}
+	.st6{font-size:16.6117px;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-658.4653" y1="18.1205" x2="-658.4653" y2="-325.4643" gradientTransform="matrix(0.5882 0.8087 1.1482 -0.833 574.3517 742.0882)">
+	<stop  offset="0.4" style="stop-color:#26AD5C"/>
+	<stop  offset="0.8071" style="stop-color:#385440"/>
+</linearGradient>
+<path class="st0" d="M84,313.6l13.3-38.9l-41.1,0.5c-3.3,0-6.9,2.6-8.3,6c-0.5,1.6-0.4,2.9,0.5,4.1c0.7,1,2.1,1.7,3.8,1.7l6.6-0.1
+	c-12.7,9.2-154.5,112.1-177,128.4l14.9,20.6c23.7-17.1,164.9-119.6,177.3-128.6l-2.3,6.7c-1.1,3.1,0.7,5.7,4.2,5.8
+	C79.3,319.4,82.9,316.8,84,313.6z"/>
+<g>
+	<path class="st1" d="M-234,333.1c0-8.2,6.6-14.8,14.8-14.8h106.2c8.2,0,14.8,6.6,14.8,14.8v106.2c0,8.2-6.6,14.8-14.8,14.8h-106.2
+		c-8.2,0-14.8-6.6-14.8-14.8V333.1z"/>
+	<path class="st1" d="M-219.1,316.3h106.2c9.1,0,16.6,7.5,16.6,16.6v106.2c0,9.1-7.5,16.6-16.6,16.6h-106.2
+		c-9.1,0-16.6-7.5-16.6-16.6V332.9C-235.9,323.8-228.4,316.3-219.1,316.3L-219.1,316.3z M-113.1,452.2c7.1,0,12.9-5.8,12.9-12.9
+		V333.1c0-7.1-5.8-12.9-12.9-12.9h-106.2c-7.1,0-12.9,5.8-12.9,12.9v106.2c0,7.1,5.8,12.9,12.9,12.9H-113.1L-113.1,452.2z"/>
+</g>
+<text transform="matrix(1 0 0 1 -223.2978 378.1675)" class="st2 st3 st4">&gt;58% </text>
+<text transform="matrix(1 0 0 1 -223.2978 398.1016)" class="st2 st5 st6">        of adults</text>
+<text transform="matrix(1 0 0 1 -223.2978 418.0351)" class="st2 st5 st6">        in Wales</text>
+<text transform="matrix(1 0 0 1 -223.2978 437.9698)" class="st2 st5 st6">        are overweight</text>
+</svg>

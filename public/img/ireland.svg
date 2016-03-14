@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-241 333 188 186" style="enable-background:new -241 333 188 186;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#A1B963;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'SolexBlack';}
+	.st4{font-size:44px;}
+	.st5{font-family:'SolexBold';}
+	.st6{font-size:14px;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-809.818" y1="62.5929" x2="-809.818" y2="-111.7162" gradientTransform="matrix(-0.6875 0.7262 0.7262 0.6875 -628.331 1088.0885)">
+	<stop  offset="0.4" style="stop-color:#00A6C9"/>
+	<stop  offset="0.8071" style="stop-color:#385478"/>
+</linearGradient>
+<path class="st0" d="M-78.6,509.9l17-0.4l-0.4-17c0-1.4-1.2-2.5-2.6-2.5c-0.7,0-1.3,0.3-1.8,0.8c-0.4,0.4-0.7,1.1-0.7,1.8l0.1,2.7
+	c-4-3.8-49.6-46.9-56.8-53.8l-8.9,9.3c7.6,7.2,52.9,50.1,56.9,53.9l-2.9,0.1c-1.4,0-2.5,1.2-2.5,2.6C-81.1,508.9-80,510-78.6,509.9z
+	"/>
+<g>
+	<path class="st1" d="M-234.2,352.3c0-6.9,5.6-12.5,12.5-12.5h89.5c6.9,0,12.5,5.6,12.5,12.5v89.5c0,6.9-5.6,12.5-12.5,12.5h-89.5
+		c-6.9,0-12.5-5.6-12.5-12.5V352.3z"/>
+	<path class="st1" d="M-221.7,338.2h89.5c7.7,0,14,6.3,14,14v89.5c0,7.7-6.3,14-14,14h-89.5c-7.7,0-14-6.3-14-14v-89.5
+		C-235.8,344.5-229.5,338.2-221.7,338.2L-221.7,338.2z M-132.3,452.8c6,0,10.9-4.9,10.9-10.9v-89.5c0-6-4.9-10.9-10.9-10.9h-89.5
+		c-6,0-10.9,4.9-10.9,10.9v89.5c0,6,4.9,10.9,10.9,10.9H-132.3L-132.3,452.8z"/>
+</g>
+<text transform="matrix(1 0 0 1 -225.2555 390.365)" class="st2 st3 st4">&gt;60% </text>
+<text transform="matrix(1 0 0 1 -225.2555 407.165)" class="st2 st5 st6">        of adults</text>
+<text transform="matrix(1 0 0 1 -225.2555 423.965)" class="st2 st5 st6">        in N. Ireland</text>
+<text transform="matrix(1 0 0 1 -225.2555 440.765)" class="st2 st5 st6">        are overweight</text>
+</svg>

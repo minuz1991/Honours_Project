@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-313.9 333 200.9 128" style="enable-background:new -313.9 333 200.9 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#A1B963;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'SolexBlack';}
+	.st3{font-size:44px;}
+	.st4{font-family:'SolexBold';}
+	.st5{font-size:14px;}
+	.st6{fill:url(#SVGID_1_);}
+</style>
+<g>
+	<path class="st0" d="M-234.2,352.3c0-6.9,5.6-12.5,12.5-12.5h89.5c6.9,0,12.5,5.6,12.5,12.5v89.5c0,6.9-5.6,12.5-12.5,12.5h-89.5
+		c-6.9,0-12.5-5.6-12.5-12.5V352.3z"/>
+	<path class="st0" d="M-221.7,338.2h89.5c7.7,0,14,6.3,14,14v89.5c0,7.7-6.3,14-14,14h-89.5c-7.7,0-14-6.3-14-14v-89.5
+		C-235.8,344.5-229.5,338.2-221.7,338.2L-221.7,338.2z M-132.3,452.8c6,0,10.9-4.9,10.9-10.9v-89.5c0-6-4.9-10.9-10.9-10.9h-89.5
+		c-6,0-10.9,4.9-10.9,10.9v89.5c0,6,4.9,10.9,10.9,10.9H-132.3L-132.3,452.8z"/>
+</g>
+<text transform="matrix(1 0 0 1 -225.2555 390.365)" class="st1 st2 st3">&gt;65% </text>
+<text transform="matrix(1 0 0 1 -225.2555 407.165)" class="st1 st4 st5">        of adults</text>
+<text transform="matrix(1 0 0 1 -225.2555 423.965)" class="st1 st4 st5">        in Scotland</text>
+<text transform="matrix(1 0 0 1 -225.2555 440.765)" class="st1 st4 st5">        are overweight</text>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-195.8148" y1="228.5954" x2="-195.8148" y2="372.1242" gradientTransform="matrix(-1.762777e-03 -1 1 -1.762777e-03 -580.5546 205.5514)">
+	<stop  offset="0.4" style="stop-color:#DB544A"/>
+	<stop  offset="0.5911" style="stop-color:#D95349"/>
+	<stop  offset="0.6599" style="stop-color:#D25148"/>
+	<stop  offset="0.7089" style="stop-color:#C74E45"/>
+	<stop  offset="0.7486" style="stop-color:#B64940"/>
+	<stop  offset="0.7821" style="stop-color:#A0433A"/>
+	<stop  offset="0.8117" style="stop-color:#853B33"/>
+	<stop  offset="0.8121" style="stop-color:#853B33"/>
+</linearGradient>
+<path class="st6" d="M-301.5,391l-9.9,9.9l9.9,9.9c0.8,0.8,2.1,0.8,3,0c0.4-0.4,0.6-0.9,0.6-1.5c0-0.5-0.2-1.1-0.6-1.5l-1.6-1.6
+	c4.6,0,56.2-0.1,64.4-0.1l0-10.6c-8.6,0-60,0.1-64.5,0.1l1.7-1.7c0.8-0.8,0.8-2.1,0-3C-299.4,390.2-300.7,390.2-301.5,391z"/>
+</svg>
