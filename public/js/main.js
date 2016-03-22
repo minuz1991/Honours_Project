@@ -7,10 +7,18 @@ $(function() {
         BMR = 0,
         TDEE = 0,
         user = 'user',
-        inc = 0;
+        inc = 0,
+        units = '',
+        metric = false,
+        male = true;
 
-    var male = true;
+    // Modal Boxes
 
+    $("#btn9,#btn0").animatedModal();
+
+    //####################################################################
+    // GENDER START
+    //####################################################################
     $('#gmale').on("click", function(){
         male = true;
         $('#superBoy,#finishLine').css("display", "block");
@@ -24,6 +32,22 @@ $(function() {
         $('#superBoy').css("display", "none");
         // alert(male);
     });
+    //####################################################################
+    // GENDER END
+    //####################################################################
+
+
+    //####################################################################
+    // Personal Start
+    //####################################################################
+    $('#personalDetails input').prop('disabled', true);
+    $('#personalDetails input').css('background', 'rgba(255,255,255,0.3)');
+
+    $("#units").change(function () {
+        $('#personalDetails input').prop('disabled', false);
+        $('#personalDetails input').css('background', 'rgba(255,255,255,1)');
+        adjustUnits();
+    });
 
     $('#weightInput').keyup(function(){
         var temp = parseFloat($('#weightInput').val());
@@ -36,7 +60,7 @@ $(function() {
     });
 
     $('#heightInput').keyup(function(){
-        var temp = parseInt($('#heightInput').val());
+        var temp = parseFloat($('#heightInput').val());
         if( isNaN(temp)){
             $('#heightInput').css('background','#CF4A30');
         }else{
@@ -55,6 +79,9 @@ $(function() {
             calcBMR(weight,height,age);
         }
     });
+    //####################################################################
+    // Personal END
+    //####################################################################
 
     $('#btn1,#btn2,#btn3,#btn4,#btn5').on('click',function(){
         var btn = parseInt($(this).text());
@@ -66,17 +93,46 @@ $(function() {
         calcDefOrSurp(btn);
     });
 
-    function calcBMR(w, h, a){
-        if(male){
-            BMR = 88 + (13.4 * w) + (4.8 * h) - (5.7 * a);
-            // alert('Man ' + BMR);
-            createCookie(w,h,a);
-        }else{
-            // alert('Girls bmr' + w + " weight " + h + " height " + a + ' age')
-            BMR = 448 + (9.2 * w) + (3.1 * h) - (4.3 * a);
-            createCookie(w,h,a);
-            // alert('Woman ' +BMR)
+    function adjustUnits() {
+        units = $('#units').val();
+        if (units == 'metric') {
+            metric = true;
+            $('#weightInput').attr('placeholder', 'Your weight in kilos');
+            $('#heightInput').attr('placeholder', 'Your height in cm');
+        } else {
+            metric = false;
+            $('#weightInput').attr('placeholder', 'Your weight in lbs');
+            $('#heightInput').attr('placeholder', 'Your height in inches');
         }
+    }
+
+    function calcBMR(w, h, a){
+        //Metric conversion
+        if (metric == true) {
+            if (male) {
+                BMR = 88 + (13.4 * w) + (4.8 * h) - (5.7 * a);
+                // alert('Man ' + BMR);
+                createCookie(w, h, a);
+            } else {
+                // alert('Girls bmr' + w + " weight " + h + " height " + a + ' age')
+                BMR = 448 + (9.2 * w) + (3.1 * h) - (4.3 * a);
+                createCookie(w, h, a);
+                // alert('Woman ' +BMR)
+            }
+            //Doing imperial conversions
+        }else{
+            if (male) {
+                BMR = 88 + (6.1 * w) + (12.2 * h) - (5.7 * a);
+                // alert('Man ' + BMR);
+                createCookie(w, h, a);
+            } else {
+                // alert('Girls bmr' + w + " weight " + h + " height " + a + ' age')
+                BMR = 448 + (4.2 * w) + (7.9 * h) - (4.3 * a);
+                createCookie(w, h, a);
+                // alert('Woman ' +BMR)
+            }
+        }
+
     }
 
     function calcTDEE(activityLvl){
@@ -125,23 +181,25 @@ $(function() {
                 $('#screen').text('Your daily calories with 10% surplus ' + surplus);
                 break;
             case 9:
-                weight = parseInt(prompt('Please enter your weight'));
-                height = parseInt(prompt('Please enter your height'));
-                age = parseInt(prompt('Please enter your age'));
+                //units
+                // weight = parseInt(prompt('Please enter your weight'));
+                // height = parseInt(prompt('Please enter your height'));
+                // age = parseInt(prompt('Please enter your age'));
                 if(weight != null && height != null && age != null){
                     male = true;
                     calcBMR(weight, height, age);
-                    $('#screen').text('Select activity level')
+                    $('#screen').text('Please select activity level')
                 }
                 break;
             case 0:
-                weight = parseInt(prompt('Please enter your weight'));
-                height = parseInt(prompt('Please enter your height'));
-                age = parseInt(prompt('Please enter your age'));
+                // units
+                // weight = parseInt(prompt('Please enter your weight'));
+                // height = parseInt(prompt('Please enter your height'));
+                // age = parseInt(prompt('Please enter your age'));
                 if(weight != null && height != null && age != null){
                     male = false;
                     calcBMR(weight, height, age);
-                    $('#screen').text('Select activity level')
+                    $('#screen').text('Please select activity level')
                 }
 
                 break;
@@ -184,6 +242,8 @@ $(function() {
         style: { classes: 'qtip-bootstrap' }
     });
 
+    $('#stat5, #stat6').qtip();
+
     $('#side1,#side2,#side3,#side4,#side5,#side6,#side7,#side8,#side9').qtip({
         content: {
             text: function(event, api) {
@@ -220,28 +280,26 @@ $(function() {
         style : {classes : 'qtip-bootstrap'}
     });
 
-    $('.mapPoint').qtip({
-        content: {
-            text: function(event, api) {
-                // Retrieve content from ALT attribute of the $('.selector') element
-                return $(this).attr('sideText');
-            },
-            title: function(event, api) {
-                // Retrieve content from ALT attribute of the $('.selector') element
-                return $(this).attr('sideTitle');
-            }
-        },
-        position: {
-            target: 'mouse', // Track the mouse as the positioning target
-            adjust: { x: 10, y: 15 } // Offset it slightly from under the mouse
-        },
-        style : {classes : 'qtip-bootstrap'}
-    });
 
     $("#pointScotland").on('mouseover',function(){
         $("#imgScotland").css("display","block");
     }).on('mouseout',function(){
         $("#imgScotland").css("display","none");
+    });
+    $("#pointEngland").on('mouseover', function () {
+        $("#imgEngland").css("display", "block");
+    }).on('mouseout', function () {
+        $("#imgEngland").css("display", "none");
+    });
+    $("#pointWales").on('mouseover', function () {
+        $("#imgWales").css("display", "block");
+    }).on('mouseout', function () {
+        $("#imgWales").css("display", "none");
+    });
+    $("#pointIreland").on('mouseover', function () {
+        $("#imgIreland").css("display", "block");
+    }).on('mouseout', function () {
+        $("#imgIreland").css("display", "none");
     });
 
 })();

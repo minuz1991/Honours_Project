@@ -68,6 +68,17 @@ textarea {
 
 /*Intro Page*/
 #intro{width: 100%; height:100%;}
+
+#introBook, #outroBook {
+    width: 70%;
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0%;
+    right: 0;
+}
 #welcome1{  width: 25%;height: 25%;text-align:center;font-size:30pt;position:absolute;overflow: auto;margin: auto;top: 0; left: 0; bottom: 50%; right: 0;}
 #welcome2{ width: 35%;height: 25%;text-align:center;font-size:14pt;position:absolute;overflow: auto;margin: auto;top: 0; left: 0; bottom:0; right: 0;}
 #Usage{width:50%; position:absolute;height:35%;text-align:center;overflow: auto;margin: auto;top: 30%; left: 0; bottom: 0; right: 0;}
@@ -85,7 +96,41 @@ textarea {
 /*Personal Details Page*/
 #personalDetails{width: 100%;height: 100%;}
 #weightBtn,#heightBtn,#ageBtn{height:38px; outline: none;border:none; width:50px; background:grey; position:absolute;overflow: auto;margin: auto;top: 70%; left: 0; bottom: 0; right: -260px;}
-#personalDetails input{width:200px; height:50px; outline:none; border:none; color:black; text-align: center; position:absolute;overflow: auto;margin: auto;top: 70%; left: 0; bottom: 0; right: 0;}
+
+#personalDetails input {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: black;
+    text-align: center;
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    top: 70%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#units {
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    color: grey;
+    background: white;
+    outline: none;
+    border: none;
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    top: -80%;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 #weight,#height,#age{width:33.36%;height: 100%;float:left;overflow: auto;margin: auto;top: 0; left: 0; bottom: 0; right: 0;}
 /*#height{width:33.3%;height: 100%;float:left;overflow: auto;margin: auto;top: 0; left: 0; bottom: 0; right: 0;}
 #age{width:33.3%;height: 100%;float:left;}*/
@@ -134,9 +179,33 @@ textarea {
 #statistics, #statGallery{width: 100%; height: 100%;}
 #obesityDesc{ height: 100%; width:50%; left:25%; right: 25%; }
 #ukMapDesc{width: 50%;left:25%;right: 25%; height: 600px;}
-.mapPoint{width: 20px; height: 20px; border-radius: 50%; background: white;-webkit-box-shadow: 0 0 10px 0.2px rgba(0,0,0,1);box-shadow: 0 0 10px 0.2px rgba(0,0,0,1);}
+
+.mapPoint {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
 .mapPoint:hover{-webkit-box-shadow:none;box-shadow:none;}
-#imgScotland{display:none;width:250px; }
+
+#imgScotland, #imgEngland, #imgWales, #imgIreland {
+    display: none;
+    width: 250px;
+}
+
+#ukMap {
+    width: 100%;
+    height: 100%;
+}
+
+#ukMap h1 {
+    text-align: center;
+    overflow: auto;
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+}
 
 .statisticPoint{font-size: 24pt;height:40%;width:20%;overflow: auto; margin: auto;top: 0; left: 0;right: 0;}
 #statDesc1,#statDesc2,#statDesc3{width:48%; text-align:center;overflow: auto; margin: auto;top: 0; left: 0;right: 0;}
@@ -156,6 +225,9 @@ textarea {
 #tdeeExplanation3{background:darkgrey;width: 351px; height:85px; overflow: auto; margin: auto;top: 0; left: 0;right: 0;}
 #tdeeDesc1,#tdeeDesc2{background:rgba(51,55,84,0.8); padding: 1% 2%; -webkit-border-radius: 20px;border-radius: 20px;width: 18%; height: 465px;overflow: auto; margin: auto;top: 0; left: 0;right: 0;}
 
+#btn9, #btn0 {
+    z-index: 99999;
+}
 #screen{width: 330px; height:100px; text-align: center; color:black;border-radius: 15px; overflow: auto; margin: auto;top: 0; left: 0;right: 0;}
 .tdeeButton{width:65px; height: 25px; padding:20px 0; border-radius: 15px; overflow: auto; text-align: center;margin: auto;top: 0; left: 0;right: 0;}
 #clearButton{width:112px; height:50px;background:darkgrey; }
@@ -172,10 +244,74 @@ textarea {
 /*The End Page*/
 #theEnd,#footerBar{width:100%; height: 100%;}
 #theCloud{width: 100%; height:100%; overflow: auto; text-align: center; margin: auto;top: 0; left: 0;right: 0;}
-#end{font-size: 32pt; width:188px; overflow: auto; text-align: center;margin: auto;top: 0; left: 0;right: 0;}
+
+#end {
+    font-size: 32pt;
+    width: 288px;
+    overflow: auto;
+    text-align: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 #summary{width: 50%; overflow: auto; text-align: center; margin: auto;top: 0; left: 0;right: 0;}
-.footerBarButtons{width:60px; height: 60px; background:orange;float:left; margin:10px;}
+
+.footerBarButtons {
+    width: 60px;
+    display: none;
+    height: 60px;
+    background: orange;
+    float: left;
+    margin: 10px;
+}
 #footerBar{width:320px;margin: auto;top: 0; left: 0;right: 0;}
+
+#bottomText {
+    overflow: auto;
+    text-align: center;
+}
+
+/* Modal Boxes */
+#TDEEPersonal {
+    width: 14%;
+    height: 100%;
+    padding: 30px;
+    overflow: auto;
+    margin: 10% auto;
+    top: 20%;
+    left: 0;
+    right: 0;
+    border: 1px solid white;
+}
+
+#TDEEPersonal input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin: 10px auto;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: black;
+}
+
+#modalUnits {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    color: grey;
+    background: white;
+    outline: none;
+    border: none;
+}
+
+#close-animatedModal {
+    width: 10%;
+    text-align: center;
+    margin: auto
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
